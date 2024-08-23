@@ -533,7 +533,7 @@ var d = 'dn';
 			}
 		});
 	
-	Lampa.Template.add('CLOCKSTYLE', '<div id="clockstyle"><style>#MyClockDiv{position: fixed!important;' + Lampa.Storage.get('Clock_coordinates') + '; z-index: 51!important}</style></div>');
+	Lampa.Template.add('CLOCKSTYLE', '<div id="clockstyle"><style>#MyClockDiv{position: fixed!important;' + Lampa.Storage.get('Clock_coordinates') + '; z-index: 51!important; opacity: 12.5%;-webkit-text-stroke: 1px lightgray;font-size: 4em !important;}</style></div>');
 	var e = 2; 
 	$('body').append(Lampa.Template.get('CLOCKSTYLE', {}, true));
 	if (Lampa.Storage.field('ClockInPlayerPosition') == 'Center_Up'){	
@@ -579,7 +579,7 @@ var d = 'dn';
 					Right_Down: 'Справа снизу',
 					Center_Up:  'В центре сверху',
 				},
-					default: 'Left_Up'
+					default: 'Right_Up'
 				},
 				field: {
 					name: 'Положение часов на экране', //Название подпункта меню
@@ -592,7 +592,7 @@ var d = 'dn';
 					if (Lampa.Storage.field('ClockInPlayerPosition') == 'Right_Up')		Lampa.Storage.set('Clock_coordinates', 'top: 5%!important; right: 5%!important');
 					if (Lampa.Storage.field('ClockInPlayerPosition') == 'Right_Down')	Lampa.Storage.set('Clock_coordinates', 'bottom: 10%!important; right: 5%!important');
 					
-					Lampa.Template.add('CLOCKSTYLE', '<div id="clockstyle"><style>#MyClockDiv{position: fixed!important;' + Lampa.Storage.get('Clock_coordinates') + '; z-index: 51!important; opacity: 20%;-webkit-text-stroke: 1px darkgray;font-size: 4em !important;}</style></div>');
+					Lampa.Template.add('CLOCKSTYLE', '<div id="clockstyle"><style>#MyClockDiv{position: fixed!important;' + Lampa.Storage.get('Clock_coordinates') + '; z-index: 51!important;}</style></div>');
 					$('body').append(Lampa.Template.get('CLOCKSTYLE', {}, true));
 					
 					if (Lampa.Storage.field('ClockInPlayerPosition') == 'Center_Up'){	
